@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :home
   resources :post
+  resources :user_profile
   Rails.application.routes.draw do
         devise_for :users, controllers: {
           sessions: 'users/sessions'

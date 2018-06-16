@@ -24,9 +24,9 @@
             <% end %>
           </button>
           <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <%= link_to "il mio profilo",user_profile_path(id: current_user.id) %>
+            <%= link_to "Modifica profilo",edit_user_registration_path %>
+            <%= link_to('Logout', destroy_user_session_path, :method=>'delete')%>
           </div>
         </div>
       </li>
