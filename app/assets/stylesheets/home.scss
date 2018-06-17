@@ -8,6 +8,7 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .dropdown {
@@ -35,11 +36,15 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #a663cc;}
+.dropdown:hover .dropbtn {
+  background-color: #a663cc;
+  border-radius: 5px !important;
+}
 
 .bg-navbar-socialpage{
   background-color: #b298dc !important;
   color: white !important;
+  margin-bottom: 0px !important;
 }
 .bg-navbar-socialpage a{
   color: white !important;

@@ -1,7 +1,20 @@
-<div class="container-fluid">
-  <div class="col-6">
-      <% @posts.each do |post| %>
-        <%= post.description %>
-      <% end %>
+<div class="container-fluid" style="min-height: 100vh !important;background-color: #f5f5f1">
+  <div class="container">
+    <div class="col-md-offset-3 col-md-6" style="padding-top: 90px !important">
+        <% @posts.each do |post| %>
+        <div class="col-md-12 container-post">
+          <div class="container-user-post">
+            <%= current_user.name %> <%= current_user.surname %>
+          </div>
+          <div class="col-md-12 container-time-post">
+            <span class="glyphicon glyphicon-time"></span> <%= distance_of_time_in_words(Time.now,post.created_at)%>
+          </div>
+          <hr style="margin-bottom: 10px !important;border-top: 1px solid #ccc !important"/>
+          <div class="col-md-12 container-post-description">
+            <%= post.description.capitalize %>
+          </div>
+        </div>
+        <% end %>
+    </div>
   </div>
 </div>
