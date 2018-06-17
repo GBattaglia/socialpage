@@ -3009,3 +3009,59 @@ Processing by UserProfileController#show as HTML
 Completed 200 OK in 159ms (Views: 153.3ms | ActiveRecord: 0.9ms)
 
 
+Started GET "/user_profile/8" for 127.0.0.1 at 2018-06-17 11:31:23 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserProfileController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering user_profile/show.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered user_profile/show.html.erb within layouts/application (151.6ms)
+  Rendered layouts/_menu.erb (2.4ms)
+Completed 200 OK in 1611ms (Views: 1458.2ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/user_profile/8" for 127.0.0.1 at 2018-06-17 11:34:46 +0200
+Processing by UserProfileController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering user_profile/show.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered user_profile/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_menu.erb (17.9ms)
+Completed 500 Internal Server Error in 357ms (ActiveRecord: 0.7ms)
+
+
+  
+SyntaxError (/Users/Mac/Desktop/socialpage/app/views/layouts/_menu.erb:2: syntax error, unexpected keyword_class, expecting ')'
+...nd=( image_tag 'logo.png' class: 'logo' );@output_buffer.saf...
+...                               ^):
+  
+app/views/layouts/_menu.erb:2: syntax error, unexpected keyword_class, expecting ')'
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3384855046311947269_70184438574680'
+Started GET "/user_profile/8" for 127.0.0.1 at 2018-06-17 11:35:01 +0200
+Processing by UserProfileController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering user_profile/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered user_profile/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_menu.erb (2.2ms)
+Completed 200 OK in 49ms (Views: 43.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/user_profile/8" for 127.0.0.1 at 2018-06-17 11:35:15 +0200
+Processing by UserProfileController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering user_profile/show.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered user_profile/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_menu.erb (3.0ms)
+Completed 200 OK in 123ms (Views: 118.0ms | ActiveRecord: 0.7ms)
+
+
